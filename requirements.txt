@@ -1,7 +1,7 @@
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-jupyter
-nltk
+numpy==1.25.2
+pandas==2.1.1
+matplotlib==3.8.1
+seaborn==0.12.2
+scikit-learn==1.3.2
+nltk==3.9.1
+spacy==3.8.0
