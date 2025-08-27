@@ -20,8 +20,9 @@ review = st.text_area("Enter a review:", height=150)
 if st.button("Predict"):
     if review.strip():
         try:
-            pred_a = model_a.predict([review])[0]
-            pred_b = model_b.predict([review])[0]
+            pred_a = model_a.predict([[review]])[0]  # reshape to 2D
+            pred_b = model_b.predict([[review]])[0]
+
 
             col1, col2 = st.columns(2)
             with col1:
