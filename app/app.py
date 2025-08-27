@@ -5,12 +5,13 @@ import joblib
 st.set_page_config(page_title="Automated Review Rating System", layout="wide")
 st.title("⭐ Automated Review Rating System")
 
-# Load Models
+# Load Models from the app folder
 try:
-    model_a = joblib.load("Model_A.pkl")
-    model_b = joblib.load("Model_B.pkl")
+    model_a = joblib.load("app/Model_A.pkl")
+    model_b = joblib.load("app/Model_B.pkl")
 except FileNotFoundError:
-    st.error("Model files not found! Make sure Model_A.pkl and Model_B.pkl are in the same folder as app.py.")
+    st.error("Model files not found! Make sure Model_A.pkl and Model_B.pkl are in the app folder.")
+
 
 # User input
 review = st.text_area("Enter a review:", height=150)
