@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 
 st.set_page_config(page_title="Automated Review Rating System", layout="wide")
-st.title("⭐ Automated Review Rating System — Compare Two Models")
+st.title("⭐ Automated Review Rating System ")
 
 # Load models
 model_a = joblib.load("Model_A.pkl")
