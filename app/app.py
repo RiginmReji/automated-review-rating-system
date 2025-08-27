@@ -3,7 +3,7 @@ import joblib
 
 # Page config
 st.set_page_config(page_title="Automated Review Rating System", layout="wide")
-st.title("⭐ Automated Review Rating System — Compare Two Models")
+st.title("⭐ Automated Review Rating System")
 
 # Load models and vectorizers
 try:
