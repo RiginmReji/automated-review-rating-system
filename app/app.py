@@ -5,8 +5,8 @@ st.set_page_config(page_title="Automated Review Rating System", layout="wide")
 st.title("⭐ Automated Review Rating System ")
 
 # Load models
-model_a = joblib.load("Model_A.pkl")
-model_b = joblib.load("Model_B.pkl")
+model_a = joblib.load("Model_A(1).pkl")
+model_b = joblib.load("Model_B(1).pkl")
 
 review = st.text_area("Enter a review:", height=150)
 
