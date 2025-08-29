@@ -15,7 +15,7 @@ try:
     model_a = joblib.load("app/Model_A_pipeline.pkl")  # Balanced pipeline
     model_b = joblib.load("app/Model_B_pipeline.pkl")  # Imbalanced pipeline
 except Exception as e:
-    st.error("❌ Model files not found! Please make sure both pipeline .pkl files are in the 'app' folder.")
+    st.error("❌ Model files not found! Make sure both pipeline .pkl files are in the 'app' folder.")
     st.stop()
 
 # -------------------------------
@@ -35,10 +35,13 @@ review = st.text_area("✍️ Enter a review:", height=150)
 # Prediction button
 # -------------------------------
 if st.button("Predict"):
-    if review.strip():
-        try:
-            cleaned_review = clean_text(review)
+    cleaned_review = clean_text(review)
 
+    # Prevent prediction if input is empty after cleaning
+    if not cleaned_review:
+        st.warning("⚠️ Please enter valid text (letters only). Numbers and symbols are ignored.")
+    else:
+        try:
             # Predict using both models
             pred_a = model_a.predict([cleaned_review])[0]
             pred_b = model_b.predict([cleaned_review])[0]
@@ -55,8 +58,7 @@ if st.button("Predict"):
 
         except Exception as e:
             st.error(f"⚠️ Error during prediction: {e}")
-    else:
-        st.warning("⚠️ Please enter a review before predicting.")
+
 
 
 
