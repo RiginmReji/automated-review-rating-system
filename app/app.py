@@ -22,7 +22,7 @@ st.title("⭐ Automated Review Rating System — Compare Two Models")
 try:
     model_a = joblib.load("app/Model_A.pkl")
     model_b = joblib.load("app/Model_B.pkl")
-    vectorizer = joblib.load("app/vectorizer.pkl")   # ✅ load vectorizer
+    vectorizer = joblib.load("app/vectorizer_A.pkl")   # ✅ load vectorizer
 except Exception as e:
     st.error(f"One or more model/vectorizer files not found: {e}")
     st.stop()
