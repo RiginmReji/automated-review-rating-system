@@ -6,7 +6,7 @@ st.title("⭐ Automated Review Rating System — Compare Two Models")
 
 # Try loading the models
 try:
-    model_a = joblib.load("app/Model_A_pipeline(1).pkl")  # Balanced pipeline
+    model_a = joblib.load("app/Model_A_pipeline.pkl")  # Balanced pipeline
     model_b = joblib.load("app/Model_B_pipeline.pkl")  # Imbalanced pipeline
 except Exception as e:
     st.error("❌ Model files not found! Please make sure Model_A_pipeline.pkl and Model_B_pipeline.pkl are inside the 'app' folder.")
