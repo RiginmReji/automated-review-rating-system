@@ -14,7 +14,7 @@ english_vocab = set(words.words())
 # Streamlit page configuration
 # -------------------------------
 st.set_page_config(page_title="Automated Review Rating System", layout="wide")
-st.title("⭐ Automated Review Rating System — Compare Two Models")
+st.title("⭐ Automated Review Rating System")
 
 # -------------------------------
 # Load pipelines
